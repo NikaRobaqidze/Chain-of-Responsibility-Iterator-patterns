@@ -6,16 +6,26 @@ import ge.nick.changeOfResponse.utils.Stuff;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Souschef extends Stuff {
+/**
+ * Class imitate Sous chef stuff of the restaurant.
+ * Stuff that work only with specific items from order.
+ * Take order list and delete item from list if it can work
+ * with it then change response.
+ * New chain take updated order list.
+ */
 
-    public Souschef() {
+public class SousChef extends Stuff {
 
+    public SousChef() {
+
+        // List of specific items with what it works.
         List<String> SouschefList = new ArrayList<>();
 
         SouschefList.add("Soy Sauce");
         SouschefList.add("Taco Sauce");
         SouschefList.add("Tartar Sauce");
 
+        // Set items list.
         setCookiesList(SouschefList);
     }
 
@@ -28,13 +38,16 @@ public class Souschef extends Stuff {
     public void handle(Order order) {
 
         final List<String> orderItems = order.getOrderItems();
-        final List<String> cheffItems = super.getCookiesList();
+        final List<String> chefItems = super.getCookiesList();
+
+        // Delete item from order if it is from chef s list.
 
         for(int i = 0; i < orderItems.size(); i++){
 
             final String item = orderItems.get(i);
 
-            if(cheffItems.contains(item)){
+            // Find item to compare.
+            if(chefItems.contains(item)){
 
                 System.out.println("Sous-chef will make " + item);
 
@@ -43,6 +56,7 @@ public class Souschef extends Stuff {
             }
         }
 
+        // Change of response.
         super.handle(order);
     }
 }
