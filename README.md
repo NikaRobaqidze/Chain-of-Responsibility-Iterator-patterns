@@ -6,7 +6,6 @@ Using: IntelJ IDEA Community Edition
 ## Task
 
 1) Write a program that solves a specific task with the Chain of Responsibility pattern.
-
 For example, a multi-functional restaurant in which a request comes in and this 
 request can be handled by a butler, baker, pizza baker, sushi chef, etc. 
 If one can handle the order, then it will execute the order and return the result.
