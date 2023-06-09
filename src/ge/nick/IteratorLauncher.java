@@ -16,6 +16,5 @@ public class IteratorLauncher {
             final Stuff stuff = iterator.next();
             System.out.println(stuff);
         }
-
     }
 }
