@@ -1,5 +1,5 @@
 # Chain of Responsibility and Iterator design patterns
-Chain of responsibility and iterator patterns on java in restaurant example.
+Chain of responsibility and iterator design patterns on java in restaurant example.
 
 Using: IntelJ IDEA Community Edition
 
